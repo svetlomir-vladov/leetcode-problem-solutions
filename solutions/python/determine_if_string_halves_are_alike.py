@@ -13,6 +13,7 @@ class Solution(object):
             for letter in input_string:
                 if letter in vowels:
                     vowels_count += 1
+                    
             return vowels_count
 
         s = s.lower()

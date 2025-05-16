@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include <unordered_map>
-
 using namespace std;
 
 class Solution {
@@ -24,7 +23,7 @@ class Solution {
                 int value = roman_int_map[roman_numeral];
 
                 if (value == 1 || value == 10 || value == 100) {
-                    // The code doesn't break when trying to access an out-of-bounds variable
+                    // Doesn't break when trying to access an out-of-bounds variable
                     char next_roman_numeral = roman_numeral = s[i+1];
                     int next_value = roman_int_map[next_roman_numeral];
 

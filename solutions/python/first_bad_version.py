@@ -1,5 +1,3 @@
-import sys
-
 def isBadVersion(version):
     if version >= 1:
         return True
