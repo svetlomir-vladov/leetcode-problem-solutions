@@ -13,19 +13,22 @@ struct TreeNode {
  
 class Solution {
 public:
-    TreeNode* createTree(vector<int> nums, int start, int end) {
-        if (start > end) return nullptr;
-        int mid = start + (end - start) / 2;
-
-        TreeNode* node = new TreeNode(nums[mid]);
-        node->left = createTree(nums, start, mid - 1);
-        node->right = createTree(nums, mid + 1, end);
-        return node;
-    }
-
     TreeNode* sortedArrayToBST(vector<int>& nums) {
         if (nums.empty()) return nullptr;
-        return createTree(nums, 0, nums.size() - 1);
+        return buildBST(nums, 0, nums.size() - 1);
+    }
+
+private:
+    TreeNode* buildBST(const vector<int>& nums, int start, int end) {
+        if (start > end) return nullptr;
+        
+        int mid = start + (end - start) / 2;
+        TreeNode* root = new TreeNode(nums[mid]);
+        
+        root->left = buildBST(nums, start, mid - 1);
+        root->right = buildBST(nums, mid + 1, end);
+        
+        return root;
     }
 };
 
