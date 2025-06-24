@@ -45,6 +45,13 @@ TreeNode* generate_complete_binary_tree(int nodes) {
     return root;
 }
 
+void delete_tree (TreeNode* curr) {
+    if (!curr) return;
+    delete_tree(curr->left);
+    delete_tree(curr->right);
+    delete curr;
+}
+
 int main() {
     TreeNode* binary_tree = generate_complete_binary_tree(7);
     Solution sol;
@@ -56,5 +63,7 @@ int main() {
         std::cout << " " << num;
     }
     std::cout << "\n";
+
+    delete_tree(binary_tree);
     return 0;
 }   
