@@ -1,5 +1,3 @@
-#include <iostream>
-
 struct ListNode {
     int val;
     ListNode *next;
@@ -34,7 +32,6 @@ int main() {
 
     while (input) {
         ListNode* temp = input;
-        std::cout << temp->val;
         input = input->next;
         delete temp;
     }
