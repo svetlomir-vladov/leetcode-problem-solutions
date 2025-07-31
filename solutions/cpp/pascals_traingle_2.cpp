@@ -41,4 +41,6 @@ int main() {
     for (const auto& i : result) {
         std::cout << i << "\n";
     }
+    
+    return 0;
 }
