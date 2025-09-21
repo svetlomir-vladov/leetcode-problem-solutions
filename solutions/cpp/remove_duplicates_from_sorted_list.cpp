@@ -23,18 +23,3 @@ public:
         return head;
     }
 };
-
-int main() {
-    Solution sol;
-    ListNode* input = new ListNode(1, new ListNode(1, new ListNode (2, new ListNode (3, new ListNode (3)))));
-
-    sol.deleteDuplicates(input);
-
-    while (input) {
-        ListNode* temp = input;
-        input = input->next;
-        delete temp;
-    }
-
-    return 0;
-}

@@ -1,4 +1,4 @@
 .vscode
 bin
 solutions/cpp/build
-solutions/cpp/build/Debug
+solutions/cpp/helpers

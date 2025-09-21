@@ -1,4 +1,3 @@
-#include <iostream>
 #include <vector>
 #include <queue>
 
@@ -18,39 +17,3 @@ public:
         return p->val == q->val && isSameTree(p->left, q->left) && isSameTree(p->right, q->right);
     }
 };
-
-TreeNode* generate_complete_binary_tree(int nodes) {    
-    std::queue<TreeNode*> q;
-    TreeNode* root = new TreeNode(1);
-    q.push(root);
-    
-    for (int val = 2; val <= nodes;) {
-        TreeNode* parent = q.front(); q.pop();
-        parent->left = new TreeNode(val++);
-        q.push(parent->left);
-        if (val <= nodes) {
-            parent->right = new TreeNode(val++);
-            q.push(parent->right);
-        }
-    }
-    return root;
-}
-
-void delete_tree (TreeNode* curr) {
-    if (!curr) return;
-    delete_tree(curr->left);
-    delete_tree(curr->right);
-    delete curr;
-}
-
-int main() {
-    TreeNode* t1 = generate_complete_binary_tree(7);
-    TreeNode* t2 = generate_complete_binary_tree(7);
-
-    Solution sol;
-    std::cout << sol.isSameTree(t1, t2) << "\n";
-
-    delete_tree(t1);
-    delete_tree(t2);
-    return 0;
-}

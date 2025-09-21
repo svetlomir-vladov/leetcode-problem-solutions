@@ -16,10 +16,3 @@ public:
         return -1;
     }
 };
-
-int main () {
-    Solution sol;
-    std::vector<int> input{2,2,1,1,1,2,2};
-    std::cout << sol.majorityElement(input) << "\n";
-    return 0;
-}

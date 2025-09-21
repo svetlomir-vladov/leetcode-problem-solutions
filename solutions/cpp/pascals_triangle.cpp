@@ -1,3 +1,4 @@
+#include <iostream>
 #include <vector>
 
 class Solution {
@@ -24,9 +25,3 @@ public:
         return result;
     }
 };
-
-
-int main() {
-    Solution sol;
-    sol.generate(10);
-}

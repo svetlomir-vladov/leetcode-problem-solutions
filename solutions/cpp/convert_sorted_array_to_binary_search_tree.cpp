@@ -17,7 +17,6 @@ public:
         if (nums.empty()) return nullptr;
         return buildBST(nums, 0, nums.size() - 1);
     }
-
 private:
     TreeNode* buildBST(const vector<int>& nums, int start, int end) {
         if (start > end) return nullptr;
@@ -31,10 +30,3 @@ private:
         return root;
     }
 };
-
-int main() {
-    vector<int> nums = {-10,-3,0,5,9};
-    Solution sol;
-    sol.sortedArrayToBST(nums);
-    return 0;
-}

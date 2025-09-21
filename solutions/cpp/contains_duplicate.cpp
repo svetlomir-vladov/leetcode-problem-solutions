@@ -15,10 +15,3 @@ public:
         return false;
     }
 };
-
-int main () {
-    Solution sol;
-    std::vector<int> input{0,4,5,0,3,6};
-    std::cout << sol.containsDuplicate(input) << "\n";
-    return 0;
-}

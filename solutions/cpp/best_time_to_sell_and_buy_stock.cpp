@@ -23,10 +23,3 @@ public:
         return max_profit;
     }
 };
-
-int main() {
-    Solution sol;
-    std::vector<int> input{3, 2, 6, 1, 4};
-    std::cout << sol.maxProfit(input) << "\n";
-    return 0;
-}

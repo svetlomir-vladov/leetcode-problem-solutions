@@ -1,4 +1,3 @@
-#include <iostream>
 #include <vector>
 #include <unordered_map>
 
@@ -20,10 +19,3 @@ public:
         return -1;
     }
 };
-
-int main () {
-    Solution sol;
-    std::vector<int> input{4,1,2,1,2};
-    std::cout << sol.singleNumber(input) << "\n";
-    return 0;
-}

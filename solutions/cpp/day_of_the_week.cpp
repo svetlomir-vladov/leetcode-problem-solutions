@@ -25,9 +25,3 @@ class Solution {
             return weekdays[(h + 6) % 7];
         }
     };
-
-int main() {
-    Solution sol;
-    cout << sol.dayOfTheWeek(31, 8, 2019) << endl;
-    return 0;
-}
