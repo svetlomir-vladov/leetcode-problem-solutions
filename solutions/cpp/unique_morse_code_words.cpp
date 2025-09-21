@@ -1,58 +1,49 @@
-#include <iostream>
 #include <vector>
 #include <string>
 #include <unordered_set>
-using namespace std;
 
 class Solution {
-    public:
-        int uniqueMorseRepresentations(vector<string>& words) {
-            vector<string> morse_list = {
-                ".-",   // a
-                "-...", // b
-                "-.-.", // c
-                "-..",  // d
-                ".",    // e
-                "..-.", // f
-                "--.",  // g
-                "....", // h
-                "..",   // i
-                ".---", // j
-                "-.-",  // k
-                ".-..", // l
-                "--",   // m
-                "-.",   // n
-                "---",  // o
-                ".--.", // p
-                "--.-", // q
-                ".-.",  // r
-                "...",  // s
-                "-",    // t
-                "..-",  // u
-                "...-", // v
-                ".--",  // w
-                "-..-", // x
-                "-.--", // y
-                "--.."  // z
-            };
-            unordered_set<string> unique_morse;
-            
-            for (string word : words) {
-                string morse;
+public:
+    int uniqueMorseRepresentations(std::vector<std::string>& words) {
+        std::vector<std::string> morse_list = {
+            ".-",   // a
+            "-...", // b
+            "-.-.", // c
+            "-..",  // d
+            ".",    // e
+            "..-.", // f
+            "--.",  // g
+            "....", // h
+            "..",   // i
+            ".---", // j
+            "-.-",  // k
+            ".-..", // l
+            "--",   // m
+            "-.",   // n
+            "---",  // o
+            ".--.", // p
+            "--.-", // q
+            ".-.",  // r
+            "...",  // s
+            "-",    // t
+            "..-",  // u
+            "...-", // v
+            ".--",  // w
+            "-..-", // x
+            "-.--", // y
+            "--.."  // z
+        };
+        std::unordered_set<std::string> unique_morse;
+        
+        for (std::string word : words) {
+            std::string morse;
 
-                for (char c : word) {
-                    morse += morse_list[c - 'a'];
-                }
-                unique_morse.insert(morse);
+            for (char c : word) {
+                morse += morse_list[c - 'a'];
             }
-
-            return unique_morse.size();
+            unique_morse.insert(morse);
         }
-    };
 
-int main() {
-    vector<string> input = {"gin", "zen", "gig", "msg"};
-    Solution sol;
-    cout << sol.uniqueMorseRepresentations(input) << endl;
-    return 0;
-}
+        return unique_morse.size();
+    }
+};

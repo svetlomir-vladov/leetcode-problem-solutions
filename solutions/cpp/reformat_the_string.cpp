@@ -4,6 +4,7 @@
 using namespace std;
 
 class Solution {
+private:
     string create_permutation(const string& letters, const string& numbers, int difference) {
         string result;
         int number_iterator = 0;
@@ -31,7 +32,6 @@ class Solution {
         }
         return result;
     }
-
 public:
     string reformat(string s) {
         string numbers, letters;
@@ -47,10 +47,3 @@ public:
         return create_permutation(letters, numbers, difference);
     }
 };
-
-int main() {
-    string input = "a0b1c2";
-    Solution sol;
-    cout << sol.reformat(input) << endl;
-    return 0;
-}

@@ -1,5 +1,4 @@
 #include <iostream>
-#include <vector>
 #include <queue>
 
 struct TreeNode {
@@ -20,7 +19,7 @@ private:
         traverse(curr->right, result);
     };
 public:
-    std::vector<int> inorderTraversal(TreeNode* root) {
+    std::vector<int> preorderTraversal(TreeNode* root) {
         std::vector<int> result;
         traverse(root, result);
         return result;

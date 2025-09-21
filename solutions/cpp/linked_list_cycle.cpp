@@ -21,18 +21,3 @@ public:
         return false;
     }
 };
-
-int main() {
-    ListNode* a = new ListNode(1);
-    ListNode* b = new ListNode(2);
-    ListNode* c = new ListNode(3);
-
-    a->next = b;
-    b->next = c;
-    c->next = a;
-
-    Solution sol;
-    std::cout << "LeetCode solution result:" << "\n";
-    std::cout << sol.hasCycle(a) << "\n";
-    return 0;
-}

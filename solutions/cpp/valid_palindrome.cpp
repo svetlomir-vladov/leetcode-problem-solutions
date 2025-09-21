@@ -1,4 +1,3 @@
-#include <iostream>
 #include <string>
 #include <algorithm>
 #include <cctype>
@@ -23,11 +22,3 @@ public:
         return true;
     }
 };
-
-int main() {
-    Solution sol;
-    std::string input = "A man, a plan, a canal: Panama";
-    std::cout << "LeetCode solution result:" << "\n";
-    std::cout << sol.isPalindrome(input) << "\n";
-    return 0;
-}

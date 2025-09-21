@@ -32,15 +32,3 @@ public:
         return row;
     }
 };
-
-
-int main() {
-    Solution sol;
-    std::vector<int> result = sol.getRow(6);
-
-    for (const auto& i : result) {
-        std::cout << i << "\n";
-    }
-    
-    return 0;
-}
