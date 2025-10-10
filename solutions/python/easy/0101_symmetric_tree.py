@@ -14,4 +14,3 @@ class Solution:
 
     def isSymmetric(self, root: TreeNode) -> bool:
         return self.is_mirror(root.left, root.right)
-
