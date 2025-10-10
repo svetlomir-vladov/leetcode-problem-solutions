@@ -1,6 +1,3 @@
-from typing import Optional
-
-
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
@@ -15,6 +12,6 @@ class Solution:
                 and self.is_mirror(left.left, right.right)
                 and self.is_mirror(left.right, right.left))
 
-    def isSymmetric(self, root: Optional[TreeNode]) -> bool:
+    def isSymmetric(self, root: TreeNode) -> bool:
         return self.is_mirror(root.left, root.right)
 
